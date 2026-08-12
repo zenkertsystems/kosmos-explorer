@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#080a0d">
+  <meta name="description" content="Ein spekulatives WebGL-Gedankenexperiment über Hubble-Spannung, Fermi-Paradoxon und KBC-Leere.">
+  <title>Jenseits der Messung — ein kosmisches Gedankenexperiment</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="cosmos" aria-hidden="true"></canvas>
+  <div class="noise" aria-hidden="true"></div>
+  <div id="webglFallback" class="fallback" hidden>WebGL ist nicht verfügbar. Die Geschichte bleibt lesbar.</div>
+
+  <header class="topbar">
+    <a class="brand" href="#start" aria-label="Zum Anfang">
+      <span class="brand-mark">Ø</span><span>JENSEITS DER MESSUNG</span>
+    </a>
+    <nav class="chapter-nav" aria-label="Kapitel">
+      <a href="#hubble" data-nav="1"><i></i>01</a>
+      <a href="#fermi" data-nav="2"><i></i>02</a>
+      <a href="#kbc" data-nav="3"><i></i>03</a>
+    </nav>
+    <button id="motionToggle" class="motion-toggle" type="button" aria-pressed="false">
+      <span class="motion-icon">Ⅱ</span><span class="motion-label">Pause</span>
+    </button>
+  </header>
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <main>
+    <section id="start" class="chapter hero" data-scene="0">
+      <div class="eyebrow"><span>Experiment 00</span><span>Eine spekulative Reise</span></div>
+      <div class="hero-copy">
+        <p class="kicker">Drei Risse im Bild des Kosmos.</p>
+        <h1>Was, wenn wir<br><em>falsch hinschauen?</em></h1>
+        <p class="lead">Eine interaktive Hypothese über Expansion, kosmische Stille und das gigantische Tal, in dem wir vielleicht leben.</p>
+      </div>
+      <div class="hero-bottom">
+        <p class="disclaimer"><strong>Kein Lehrbuch.</strong> Reale Begriffe treffen hier auf bewusst spekulative Verbindungen.</p>
+        <a class="scroll-cue" href="#hubble"><span>Reise beginnen</span><b>↓</b></a>
+      </div>
+    </section>
+
+    <section id="hubble" class="chapter story" data-scene="1">
+      <div class="section-index"><span>01</span><span>EXPANSION</span></div>
+      <article class="story-copy">
+        <p class="kicker cyan">Die Hubble-Spannung</p>
+        <h2>Zwei Uhren.<br>Ein Universum.</h2>
+        <p>Wir lesen den Kosmos auf zwei Arten: im Nachglühen seines Anfangs und im Licht naher Sterne. Beide Uhren erzählen eine andere Geschwindigkeit.</p>
+        <div class="measure-pair" aria-label="Vergleich der Hubble-Werte">
+          <div><span>frühes Licht</span><strong>67</strong><small>km/s/Mpc</small></div>
+          <div><span>nahes Licht</span><strong>73</strong><small>km/s/Mpc</small></div>
+        </div>
+        <div class="control-block">
+          <label for="hubbleRange"><span>Stimme die kosmische Uhr</span><output id="hubbleOutput">70.0</output></label>
+          <input id="hubbleRange" type="range" min="67" max="73" value="70" step="0.1">
+          <div class="range-labels"><span>CMB · 67</span><span>lokal · 73</span></div>
+        </div>
+        <aside class="thought"><span>HYPOTHESE A</span><p>Vielleicht ist nicht die Expansion widersprüchlich — sondern unser Standort verzerrt den Takt.</p></aside>
+      </article>
+      <div class="scene-caption"><span class="crosshair">＋</span><p>Ziehe den Regler. Die Raumströmung reagiert auf deine gewählte kosmische Uhr.</p></div>
+    </section>
+
+    <section id="fermi" class="chapter story reverse" data-scene="2">
+      <div class="section-index"><span>02</span><span>STILLE</span></div>
+      <article class="story-copy">
+        <p class="kicker coral">Das Fermi-Paradoxon</p>
+        <h2>Ein voller Himmel.<br>Kein Echo.</h2>
+        <p>Milliarden Sterne. Unzählige Möglichkeiten. Und doch: kein bestätigtes Signal, keine Sonde, keine Spur einer Zivilisation.</p>
+        <blockquote>„Wo sind denn alle?“</blockquote>
+        <div class="filter-picker" role="group" aria-label="Position des Great Filters">
+          <button type="button" class="active" data-filter="past"><span>Filter hinter uns</span><small>Das Unwahrscheinliche war der Anfang.</small></button>
+          <button type="button" data-filter="future"><span>Filter vor uns</span><small>Das Gefährliche kommt erst noch.</small></button>
+        </div>
+        <div class="evolution" aria-label="Stufen möglicher Entwicklung">
+          <span>Materie</span><i>→</i><span>Leben</span><i>→</i><span>Komplexität</span><i>→</i><span>Intelligenz</span><i>→</i><span>Sterne</span>
+        </div>
+        <aside class="thought"><span>HYPOTHESE B</span><p>Vielleicht ist Stille kein Mangel an Leben. Vielleicht ist sie das Geräusch des Filters.</p></aside>
+      </article>
+      <div class="scene-caption"><span class="crosshair">⌁</span><p>Wähle, wo die Barriere liegt. Die Galaxie zeigt, wie viele Signale sie passieren.</p></div>
+    </section>
+
+    <section id="kbc" class="chapter story" data-scene="3">
+      <div class="section-index"><span>03</span><span>DAS TAL</span></div>
+      <article class="story-copy">
+        <p class="kicker acid">Die KBC-Leere</p>
+        <h2>Vielleicht leben wir<br>in einer Delle.</h2>
+        <p>Nicht leer — nur dünner besiedelt. Stell dir eine kosmische Senke von gewaltiger Ausdehnung vor. Wir sitzen darin und vermessen von dort das Ganze.</p>
+        <div class="void-stat"><strong>~300</strong><span>Megaparsec<br>hypothetischer Radius</span></div>
+        <div class="control-block acid-control">
+          <label for="densityRange"><span>Lokale Unterdichte simulieren</span><output id="densityOutput">25%</output></label>
+          <input id="densityRange" type="range" min="0" max="40" value="25" step="1">
+          <div class="range-labels"><span>kosmisches Mittel</span><span>tiefe Leere</span></div>
+        </div>
+        <aside class="thought"><span>HYPOTHESE C</span><p>Von innen könnte der Zug der dichteren Außenwelt wie eine schnellere lokale Expansion aussehen.</p></aside>
+      </article>
+      <div class="scene-caption"><span class="crosshair">◎</span><p>Verändere die Dichte. Teilchen wandern an den Rand der lokalen Senke.</p></div>
+    </section>
+
+    <section id="synthesis" class="chapter finale" data-scene="4">
+      <div class="section-index"><span>04</span><span>VERBINDUNG</span></div>
+      <div class="finale-copy">
+        <p class="kicker">Das Gedankenexperiment</p>
+        <h2>Ort verändert Messung.<br>Messung verändert Geschichte.</h2>
+        <div class="conjecture" aria-label="Spekulative Verbindung">
+          <div><b>KBC</b><span>Wir sitzen in einem kosmischen Tal.</span></div><i>→</i>
+          <div><b>H₀</b><span>Unsere Nähe scheint schneller zu fliehen.</span></div><i>→</i>
+          <div><b>FERMI</b><span>Vielleicht suchen wir aus einer stillen Blase hinaus.</span></div>
+        </div>
+        <p class="big-question">Was, wenn die drei Rätsel nicht dieselbe Antwort haben — aber denselben blinden Fleck?</p>
+        <div class="reality-check">
+          <span>REALITÄTSCHECK</span>
+          <p>Diese Verbindung ist eine künstlerische Spekulation. Hubble-Spannung, Fermi-Paradoxon und KBC-Leere sind reale Diskussionsfelder; eine gemeinsame Ursache ist nicht belegt.</p>
+        </div>
+        <a class="restart" href="#start">Noch einmal durchqueren ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>Interaktives Gedankenexperiment · 2026</span><span>Scrollen · Ziehen · Zweifeln</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
