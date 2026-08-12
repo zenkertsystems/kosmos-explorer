@@ -7,7 +7,7 @@
   <meta name="description" content="Ein spekulatives WebGL-Gedankenexperiment über Hubble-Spannung, Fermi-Paradoxon und KBC-Leere.">
   <title>Jenseits der Messung — ein kosmisches Gedankenexperiment</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20260812-2">
 </head>
 <body>
   <canvas id="cosmos" aria-hidden="true"></canvas>
@@ -29,6 +29,26 @@
     </button>
   </header>
   <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+  <div class="cinematic-frame" aria-hidden="true"></div>
+  <aside class="journey-rail" aria-label="Kosmische Reise">
+    <div class="journey-heading"><span>REISETIEFE</span><output id="sceneCounter">00 / 04</output></div>
+    <div class="journey-track" aria-hidden="true"><i id="journeyFill"></i></div>
+    <nav>
+      <a href="#start" data-stage="0"><i></i><span>Auftakt</span></a>
+      <a href="#hubble" data-stage="1"><i></i><span>Expansion</span></a>
+      <a href="#fermi" data-stage="2"><i></i><span>Stille</span></a>
+      <a href="#kbc" data-stage="3"><i></i><span>Das Tal</span></a>
+      <a href="#synthesis" data-stage="4"><i></i><span>Synthese</span></a>
+    </nav>
+  </aside>
+  <div class="scene-hud" aria-live="polite">
+    <span id="sceneCode">SEKTOR 00</span><strong id="sceneTitle">AUFTAKT</strong><small id="sceneDepth">Beobachtungsdistanz · 0%</small>
+  </div>
+  <div id="navigationHint" class="navigation-hint" role="status">
+    <span class="mouse-glyph" aria-hidden="true"><i></i></span>
+    <p><strong>Durch den Kosmos reisen</strong><small>Scrollen oder Kapitel wählen</small></p>
+    <button type="button" aria-label="Hinweis schließen">×</button>
+  </div>
 
   <main>
     <section id="start" class="chapter hero" data-scene="0">
@@ -121,10 +141,6 @@
   </main>
 
   <footer><span>Interaktives Gedankenexperiment · 2026</span><span>Scrollen · Ziehen · Zweifeln</span></footer>
-  <script src="app.js"></script>
+  <script src="app.js?v=20260812-2"></script>
 </body>
 </html>
-
-        <nav>
-            <a href="solar-system.html">Sonnensystem erkunden ↗</a>
-        </nav>

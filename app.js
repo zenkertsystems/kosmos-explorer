@@ -11,7 +11,15 @@
 
   const sections = [...document.querySelectorAll('[data-scene]')];
   const navLinks = [...document.querySelectorAll('[data-nav]')];
-  const motionBtn = document.querySelector('#motionToggle');
+  const motionBtn = document.querySelector("#motionToggle");
+  const stageLinks = [...document.querySelectorAll("[data-stage]")];
+  const journeyRail = document.querySelector(".journey-rail");
+  const navigationHint = document.querySelector("#navigationHint");
+  const sceneMeta = [
+    ["00", "AUFTAKT"], ["01", "EXPANSION"], ["02", "STILLE"],
+    ["03", "DAS TAL"], ["04", "SYNTHESE"]
+  ];
+  let pointerTarget = [0, 0], pointer = [0, 0], scrollVelocity = 0, lastScrollY = pageYOffset;
 
   function setMotionUI() {
     motionBtn.setAttribute('aria-pressed', String(paused));
@@ -36,20 +44,45 @@
     filterFuture = btn.dataset.filter === 'future' ? 1 : 0;
   }));
 
+  function dismissHint() { navigationHint.classList.add("dismissed"); }
+  navigationHint.querySelector("button").addEventListener("click", dismissHint);
+  addEventListener("pointermove", event => {
+    pointerTarget[0] = event.clientX / innerWidth * 2 - 1;
+    pointerTarget[1] = 1 - event.clientY / innerHeight * 2;
+    document.documentElement.style.setProperty("--pointer-x", pointerTarget[0].toFixed(3));
+    document.documentElement.style.setProperty("--pointer-y", pointerTarget[1].toFixed(3));
+  }, { passive: true });
+
   function updateScroll() {
     const max = document.documentElement.scrollHeight - innerHeight;
     scrollProgress = max > 0 ? pageYOffset / max : 0;
-    document.querySelector('#progressBar').style.width = `${scrollProgress * 100}%`;
+    document.querySelector("#progressBar").style.width = `${scrollProgress * 100}%`;
+    journeyRail.style.setProperty("--journey", `${scrollProgress * 100}%`);
+    scrollVelocity = Math.max(-1, Math.min(1, (pageYOffset - lastScrollY) / Math.max(innerHeight, 1)));
+    lastScrollY = pageYOffset;
+    if (pageYOffset > 48) dismissHint();
     const middle = innerHeight * .48;
     let nearest = sections[0], distance = Infinity;
-    sections.forEach(s => {
-      const d = Math.abs(s.getBoundingClientRect().top - middle);
-      if (d < distance) { distance = d; nearest = s; }
+    sections.forEach(section => {
+      const d = Math.abs(section.getBoundingClientRect().top - middle);
+      if (d < distance) { distance = d; nearest = section; }
     });
     targetScene = +nearest.dataset.scene;
-    navLinks.forEach(a => a.classList.toggle('active', +a.dataset.nav === targetScene));
+    const meta = sceneMeta[targetScene];
+    document.body.dataset.scene = targetScene;
+    document.querySelector("#sceneCounter").value = `${meta[0]} / 04`;
+    document.querySelector("#sceneCode").textContent = `SEKTOR ${meta[0]}`;
+    document.querySelector("#sceneTitle").textContent = meta[1];
+    document.querySelector("#sceneDepth").textContent = `Beobachtungsdistanz / ${Math.round(scrollProgress * 100)}%`;
+    sections.forEach(section => section.classList.toggle("is-current", section === nearest));
+    navLinks.forEach(link => link.classList.toggle("active", +link.dataset.nav === targetScene));
+    stageLinks.forEach(link => {
+      const active = +link.dataset.stage === targetScene;
+      link.classList.toggle("active", active);
+      if (active) link.setAttribute("aria-current", "step"); else link.removeAttribute("aria-current");
+    });
   }
-  addEventListener('scroll', updateScroll, { passive: true });
+  addEventListener("scroll", updateScroll, { passive: true });
   updateScroll();
 
   if (!gl) { fallback.hidden = false; canvas.style.display = 'none'; return; }
@@ -63,8 +96,8 @@
     precision highp float;
     varying vec2 v_uv;
     uniform sampler2D u_documentary;
-    uniform vec2 u_res;
-    uniform float u_time, u_scene, u_scroll, u_hubble, u_density, u_filter, u_textureReady;
+    uniform vec2 u_res, u_pointer;
+    uniform float u_time, u_scene, u_scroll, u_hubble, u_density, u_filter, u_textureReady, u_velocity;
 
     float hash21(vec2 p){ p=fract(p*vec2(123.34,456.21)); p+=dot(p,p+45.32); return fract(p.x*p.y); }
     float noise(vec2 p){ vec2 i=floor(p),f=fract(p); f=f*f*(3.0-2.0*f); return mix(mix(hash21(i),hash21(i+vec2(1,0)),f.x),mix(hash21(i+vec2(0,1)),hash21(i+1.0),f.x),f.y); }
@@ -129,6 +162,8 @@
 
     void main(){
       vec2 uv=(gl_FragCoord.xy-.5*u_res.xy)/u_res.y;
+      uv+=u_pointer*.012;
+      uv.y+=u_velocity*(.006+.014*length(uv));
       float aspect=u_res.x/u_res.y;
       vec2 documentaryUv=v_uv;
       float screenAspect=u_res.x/u_res.y;
@@ -137,8 +172,12 @@
       else{ documentaryUv.x=(documentaryUv.x-.5)*(screenAspect/imageAspect)+.5; }
       float cameraScale=1.035+.012*sin(u_time*.045);
       documentaryUv=(documentaryUv-.5)/cameraScale+.5;
-      documentaryUv+=vec2(sin(u_time*.031),cos(u_time*.026))*.0035;
-      vec3 documentary=texture2D(u_documentary,clamp(documentaryUv,.001,.999)).rgb;
+      documentaryUv+=vec2(sin(u_time*.031),cos(u_time*.026))*.0035+u_pointer*.006;
+      vec2 chroma=(documentaryUv-.5)*(.0014+abs(u_velocity)*.004);
+      vec3 documentary;
+      documentary.r=texture2D(u_documentary,clamp(documentaryUv+chroma,.001,.999)).r;
+      documentary.g=texture2D(u_documentary,clamp(documentaryUv,.001,.999)).g;
+      documentary.b=texture2D(u_documentary,clamp(documentaryUv-chroma,.001,.999)).b;
       documentary=pow(documentary,vec3(1.08));
       vec3 col=mix(vec3(.006,.008,.018),documentary*.82,u_textureReady);
       float t=u_time;
@@ -268,7 +307,7 @@
   gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,-1,1,1,-1,1,1]),gl.STATIC_DRAW);
   const position=gl.getAttribLocation(program,'a_position'); gl.enableVertexAttribArray(position); gl.vertexAttribPointer(position,2,gl.FLOAT,false,0,0);
   const uniforms={};
-  ['u_res','u_time','u_scene','u_scroll','u_hubble','u_density','u_filter','u_textureReady','u_documentary'].forEach(n=>uniforms[n]=gl.getUniformLocation(program,n));
+  ['u_res','u_pointer','u_time','u_velocity','u_scene','u_scroll','u_hubble','u_density','u_filter','u_textureReady','u_documentary'].forEach(n=>uniforms[n]=gl.getUniformLocation(program,n));
   let textureReady=0;
   const documentaryTexture=gl.createTexture();
   gl.activeTexture(gl.TEXTURE0); gl.bindTexture(gl.TEXTURE_2D,documentaryTexture);
@@ -297,7 +336,11 @@
     const dt=Math.min((now-last)/1000,.05); last=now;
     if(!paused) elapsed+=dt;
     scene+=(targetScene-scene)*(paused?1:.035);
+    pointer[0]+=(pointerTarget[0]-pointer[0])*.035; pointer[1]+=(pointerTarget[1]-pointer[1])*.035;
+    scrollVelocity*=.91;
     gl.uniform2f(uniforms.u_res,canvas.width,canvas.height);
+    gl.uniform2f(uniforms.u_pointer,pointer[0],pointer[1]);
+    gl.uniform1f(uniforms.u_velocity,scrollVelocity);
     gl.uniform1f(uniforms.u_time,elapsed);
     gl.uniform1f(uniforms.u_scene,scene);
     gl.uniform1f(uniforms.u_scroll,scrollProgress);
