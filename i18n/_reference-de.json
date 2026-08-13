@@ -1,0 +1,666 @@
+{
+ "bodies": {
+  "sonne": {
+   "name": "Sonne",
+   "class": "STERN · G2V",
+   "desc": "Ein 4,6 Milliarden Jahre alter gelber Zwerg. Seine Gravitation hält das System zusammen."
+  },
+  "merkur": {
+   "name": "Merkur",
+   "class": "GESTEINSPLANET",
+   "desc": "Klein, kraterreich und der Sonne am nächsten."
+  },
+  "venus": {
+   "name": "Venus",
+   "class": "GESTEINSPLANET",
+   "desc": "Eine dichte, helle Wolkendecke verbirgt eine extrem heiße Oberfläche."
+  },
+  "erde": {
+   "name": "Erde",
+   "class": "GESTEINSPLANET · HEIMAT",
+   "desc": "Ozeane, Atmosphäre und ein großer Mond prägen unsere Heimatwelt."
+  },
+  "mars": {
+   "name": "Mars",
+   "class": "GESTEINSPLANET",
+   "desc": "Eine kalte Wüstenwelt mit Eisenoxidstaub, Vulkanen und tiefen Canyons."
+  },
+  "jupiter": {
+   "name": "Jupiter",
+   "class": "GASRIESE",
+   "desc": "Der größte Planet: ein schnell rotierender Gasriese mit mächtigen Wolkenbändern."
+  },
+  "saturn": {
+   "name": "Saturn",
+   "class": "GASRIESE · RINGSYSTEM",
+   "desc": "Ein leichter Gasriese, umgeben von einem komplexen System aus Eisringen."
+  },
+  "uranus": {
+   "name": "Uranus",
+   "class": "EISRIESE",
+   "desc": "Ein blassblauer Eisriese, dessen Rotationsachse fast in der Bahnebene liegt."
+  },
+  "neptun": {
+   "name": "Neptun",
+   "class": "EISRIESE",
+   "desc": "Der äußerste Planet: dunkelblau, stürmisch und von Überschallwinden gezeichnet."
+  }
+ },
+ "moons": {
+  "mond": {
+   "name": "Mond",
+   "desc": "Gebundene Rotation, dunkle Maria und stark verkraterte Hochländer."
+  },
+  "phobos": {
+   "name": "Phobos",
+   "desc": "Ein unregelmäßiger innerer Marsmond."
+  },
+  "deimos": {
+   "name": "Deimos",
+   "desc": "Der kleine äußere Marsmond."
+  },
+  "io": {
+   "name": "Io",
+   "desc": "Die vulkanisch aktivste Welt des Sonnensystems."
+  },
+  "europa": {
+   "name": "Europa",
+   "desc": "Eine junge Eiskruste über einem globalen Ozean."
+  },
+  "ganymed": {
+   "name": "Ganymed",
+   "desc": "Der größte Mond des Sonnensystems."
+  },
+  "kallisto": {
+   "name": "Kallisto",
+   "desc": "Eine alte, dicht verkraterte Eiswelt."
+  },
+  "mimas": {
+   "name": "Mimas",
+   "desc": "Der Herschel-Krater dominiert eine Hemisphäre."
+  },
+  "enceladus": {
+   "name": "Enceladus",
+   "desc": "Helles Wassereis, Tigerstreifen und Geysire."
+  },
+  "rhea": {
+   "name": "Rhea",
+   "desc": "Eine kalte, verkraterte Eiswelt."
+  },
+  "titan": {
+   "name": "Titan",
+   "desc": "Eine orange Atmosphäre verbirgt Methanseen."
+  },
+  "iapetus": {
+   "name": "Iapetus",
+   "desc": "Eine helle und eine fast schwarze Hemisphäre."
+  },
+  "ariel": {
+   "name": "Ariel",
+   "desc": "Der hellste große Uranusmond."
+  },
+  "umbriel": {
+   "name": "Umbriel",
+   "desc": "Der dunkelste große Uranusmond."
+  },
+  "titania": {
+   "name": "Titania",
+   "desc": "Uranus größter Mond mit Störungstälern."
+  },
+  "oberon": {
+   "name": "Oberon",
+   "desc": "Eine alte, stark verkraterte Oberfläche."
+  },
+  "miranda": {
+   "name": "Miranda",
+   "desc": "Ein geologisches Patchwork mit Verwerfungen."
+  },
+  "triton": {
+   "name": "Triton",
+   "desc": "Ein eingefangener Körper auf retrograder Bahn."
+  }
+ },
+ "exo": {
+  "trappist-1": {
+   "name": "TRAPPIST-1",
+   "type": "ULTRAKÜHLER ROTER ZWERG",
+   "count": "7 PLANETEN",
+   "distance": "~40 LICHTJAHRE",
+   "description": "Ein System in etwa 40 Lichtjahren Entfernung. Es besitzt sieben erdgroße Planeten, von denen gleich mehrere in der sogenannten habitablen, also potenziell lebenfreundlichen Zone liegen.",
+   "facts": [
+    "Sieben Planeten in einer eng gekoppelten Resonanzkette.",
+    "JWST-Daten sprechen bei b und c gegen dichte Atmosphären.",
+    "Planet e bleibt ein Schwerpunkt der Atmosphären- und Habitabilitätsforschung."
+   ]
+  },
+  "kepler-90": {
+   "name": "KEPLER-90",
+   "type": "SONNENÄHNLICHER STERN",
+   "count": "8 PLANETEN",
+   "distance": "FERNES KEPLER-FELD",
+   "description": "Ein Sternsystem, das wie unser eigenes acht bekannte Planeten besitzt. Damit teilt es sich mit uns den Rekord für die größte bekannte Gefolgschaft von Planeten um einen Stern.",
+   "facts": [
+    "Alle acht bekannten Planeten passen innerhalb einer erdähnlichen Bahnskala.",
+    "Innere Gesteinswelten und äußere Gasriesen deuten auf Migration hin."
+   ]
+  },
+  "kepler-16": {
+   "name": "KEPLER-16",
+   "type": "ZIRKUMBINÄRES SYSTEM",
+   "count": "2 STERNE · 1 PLANET",
+   "distance": "TATOOINE-SYSTEM",
+   "description": "Ein berühmtes Tatooine-System: Der bekannte Planet kreist nicht um einen, sondern um zwei Sterne gleichzeitig, die umeinander tanzen.",
+   "facts": [
+    "Der Planet umkreist zwei Sterne außerhalb ihrer instabilen inneren Zone.",
+    "Ein kalter Gasriese – ein großer Mond wäre das spekulativ interessantere Habitat."
+   ]
+  },
+  "51-pegasi": {
+   "name": "51 PEGASI",
+   "type": "SONNENÄHNLICHER STERN",
+   "count": "1 BEKANNTER PLANET",
+   "distance": "ENTDECKUNG 1995",
+   "description": "Der erste sonnenähnliche Stern, bei dem 1995 ein Exoplanet entdeckt wurde. Diese Entdeckung wurde zum Startschuss für die moderne Erforschung fremder Welten.",
+   "facts": [
+    "51 Pegasi b eröffnete 1995 die moderne Exoplanetenforschung.",
+    "Der Planet ist ein extrem sternnaher Hot Jupiter."
+   ]
+  },
+  "proxima-centauri": {
+   "name": "PROXIMA CENTAURI",
+   "type": "AKTIVER ROTER ZWERG",
+   "count": "3 PLANETEN",
+   "distance": "4,24 LICHTJAHRE",
+   "description": "Unser direktes stellare Nachbarsystem. Proxima b ist eine erdgroße Welt in der habitablen Zone, deren mögliche Atmosphäre jedoch den starken Flares ihres Sterns widerstehen müsste.",
+   "facts": [
+    "Proxima b benötigt nur 11,2 Tage für einen Umlauf und könnte gebunden rotieren.",
+    "Super-Flares stellen eine mögliche Atmosphäre vor extreme Belastungen.",
+    "Proxima d gehört zu den leichtesten per Radialgeschwindigkeit bestätigten Welten."
+   ]
+  },
+  "k2-18": {
+   "name": "K2-18",
+   "type": "ROTER ZWERG · HYCEAN-KANDIDAT",
+   "count": "2 BEKANNTE PLANETEN",
+   "distance": "~124 LICHTJAHRE",
+   "description": "K2-18b ist eine große, atmosphärenreiche Welt. Methan und Kohlendioxid machen sie zu einem faszinierenden Hycean-Kandidaten; diskutierte DMS-Hinweise bleiben vorläufig und umstritten.",
+   "facts": [
+    "JWST-Spektren zeigen Methan und Kohlendioxid in der Atmosphäre von K2-18b.",
+    "Eine Hycean-Welt mit Ozean und Wasserstoffhülle ist eine mögliche Interpretation.",
+    "Der diskutierte DMS-Hinweis ist keine bestätigte Biosignatur."
+   ]
+  },
+  "55-cancri": {
+   "name": "55 CANCRI",
+   "type": "DOPPELSTERN-NACHBARSCHAFT",
+   "count": "5 PLANETEN",
+   "distance": "~41 LICHTJAHRE",
+   "description": "Ein System mit fünf bekannten Planeten. Die ultranahe Supererde 55 Cancri e besitzt eine extrem heiße Tagseite und wird als Welt mit Magma-Ozean und flüchtiger Atmosphäre interpretiert.",
+   "facts": [
+    "55 Cancri e benötigt nur etwa 18 Stunden für einen Umlauf.",
+    "Die Tagseite könnte von einem globalen Magma-Ozean geprägt sein.",
+    "Eine besonders kohlenstoffreiche oder diamantreiche Zusammensetzung bleibt modellabhängig."
+   ]
+  },
+  "gliese-581": {
+   "name": "GLIESE 581",
+   "type": "ROTER ZWERG · SIGNAL-RÄTSEL",
+   "count": "3 BESTÄTIGTE PLANETEN",
+   "distance": "~20 LICHTJAHRE",
+   "description": "Ein historischer Meilenstein der Exoplanetenforschung. Gliese 581c galt zunächst als potenziell lebensfreundlich, dürfte aber eine extrem heiße, gebunden rotierende Treibhauswelt sein.",
+   "facts": [
+    "Gliese 581c dürfte eher einer gebunden rotierenden Treibhauswelt als einer zweiten Erde ähneln.",
+    "Das 2010 gemeldete Signal von Gliese 581g wird heute überwiegend als Sternaktivität statt als Planet interpretiert.",
+    "Das System dokumentiert, wie Messsignale und Modelle wissenschaftlich neu bewertet werden."
+   ]
+  },
+  "gliese-12": {
+   "name": "GLIESE 12",
+   "type": "KÜHLER ROTER ZWERG",
+   "count": "1 BEKANNTER PLANET",
+   "distance": "~40 LICHTJAHRE",
+   "description": "Gliese 12b ist fast erdgroß und bewegt sich am inneren Rand der habitablen Zone. Die experimentelle Nahansicht stellt die offene Frage zwischen erdähnlicher und venusähnlicher Atmosphäre ins Zentrum.",
+   "facts": [
+    "Gliese 12b besitzt ungefähr 0,93 Erdradien und eine Umlaufzeit von rund 12,8 Tagen.",
+    "Seine Atmosphäre könnte zwischen erdähnlichen und venusähnlichen Extremen liegen.",
+    "Die Nähe und günstige Geometrie machen ihn zu einem interessanten Atmosphärenziel."
+   ]
+  },
+  "gliese-1214": {
+   "name": "GLIESE 1214",
+   "type": "ROTER ZWERG · MINI-NEPTUN",
+   "count": "1 BEKANNTER PLANET",
+   "distance": "~48 LICHTJAHRE",
+   "description": "Gliese 1214b steht für einen Planetentyp ohne direktes Gegenstück im Sonnensystem: eine dichte Mini-Neptun-Welt mit heißer, wolkenreicher Atmosphäre und möglichem tiefem Wasserreservoir.",
+   "facts": [
+    "Gliese 1214b ist eine große Mini-Neptun-Welt mit dichter, wolkenreicher Atmosphäre.",
+    "Ein tiefer Wasservorrat ist möglich, bleibt unter hohen Drücken aber exotisch.",
+    "Die Nahansicht ist eine kinematische Interpretation einer heißen Dampf- und Ozeanwelt."
+   ]
+  },
+  "gliese-710": {
+   "name": "GLIESE 710",
+   "type": "ZUKÜNFTIGER STERNVORBEIFLUG",
+   "count": "KEINE BEKANNTEN PLANETEN",
+   "distance": "~62 LICHTJAHRE · IM ANFLUG",
+   "description": "Kein bekanntes Planetensystem, sondern ein zukünftiger Besucher: In ungefähr 1,2 Millionen Jahren dürfte Gliese 710 die äußere Oortsche Wolke durchqueren und zahlreiche Kometenbahnen gravitativ verändern.",
+   "facts": [
+    "Für Gliese 710 sind derzeit keine Planeten bekannt.",
+    "Seine größte Bedeutung ist der erwartete nahe Vorbeiflug in ungefähr 1,2 Millionen Jahren.",
+    "Die Passage könnte viele Körper der Oortschen Wolke umlenken und langfristig die Kometenrate erhöhen."
+   ]
+  },
+  "kepler-11": {
+   "name": "KEPLER-11",
+   "type": "G-STERN · EXTREM KOMPAKT",
+   "count": "6 PLANETEN",
+   "distance": "~2.100 LICHTJAHRE",
+   "description": "Ein kosmisches Gedränge aus sechs bekannten Planeten. Die inneren fünf Bahnen passen vollständig innerhalb der Merkurbahn und liegen beinahe in einer einzigen hauchdünnen Ebene.",
+   "facts": [
+    "Die inneren fünf Planeten kreisen vollständig innerhalb einer merkurnahen Vergleichsskala.",
+    "Die Bahnen liegen nahezu koplanar in einer extrem dünnen Scheibe.",
+    "Kurze Umlaufzeiten und niedrige Dichten deuten auf eine ruhige gemeinsame Migration hin."
+   ]
+  },
+  "hd-10180": {
+   "name": "HD 10180",
+   "type": "SONNENÄHNLICHER STERN",
+   "count": "6+ PLANETENKANDIDATEN",
+   "distance": "~127 LICHTJAHRE",
+   "description": "Eines der reichsten bekannten nahen Systeme. Die kinematische Ansicht zeigt sechs geordnete Hauptwelten, überwiegend heiße Supererden und neptunähnliche Planeten statt eines äußeren Jupiter-Zwillings.",
+   "facts": [
+    "Mindestens sechs starke Signale machen HD 10180 zu einem ungewöhnlich reichen System.",
+    "Die dargestellten Welten sind überwiegend heiße Supererden und neptunähnliche Planeten.",
+    "Weitere schwächere Kandidaten bleiben von Modell und Datenauswertung abhängig."
+   ]
+  },
+  "hr-8799": {
+   "name": "HR 8799",
+   "type": "JUNGES RIESENPLANETENSYSTEM",
+   "count": "4 RIESENPLANETEN",
+   "distance": "~133 LICHTJAHRE",
+   "description": "Vier direkt abgebildete Riesenplaneten ziehen auf gewaltigen Bahnen um einen jungen Stern. Ihre langsame Bewegung lässt sich über Jahre hinweg tatsächlich in Teleskopaufnahmen verfolgen.",
+   "facts": [
+    "Vier massive Riesenplaneten wurden direkt abgebildet.",
+    "Die weit ausgedehnten Bahnen benötigen grob Jahrzehnte bis Jahrhunderte pro Umlauf.",
+    "Die junge Eigenwärme der Planeten macht ihre Bewegung in langjährigen Bildserien sichtbar."
+   ]
+  },
+  "toi-700": {
+   "name": "TOI-700",
+   "type": "RUHIGER ROTER ZWERG",
+   "count": "4 PLANETEN",
+   "distance": "~100 LICHTJAHRE",
+   "description": "Ein kompaktes System um einen vergleichsweise ruhigen roten Zwerg. TOI-700 d und e stehen als erdgroße Welten nahe beziehungsweise innerhalb der habitablen Zone im Mittelpunkt.",
+   "facts": [
+    "Vier bekannte Planeten bilden ein kompaktes System um einen relativ ruhigen roten Zwerg.",
+    "TOI-700 d und e liegen in für Habitabilitätsmodelle interessanten Energiebereichen.",
+    "Die Nahansicht ist eine atmosphärisch offene, kinematische Interpretation."
+   ]
+  },
+  "lhs-1140": {
+   "name": "LHS 1140",
+   "type": "ROTER ZWERG · SUPERERDE",
+   "count": "2 PLANETEN",
+   "distance": "~49 LICHTJAHRE",
+   "description": "LHS 1140b ist eine massereiche Gesteinswelt in der habitablen Zone. Die kinematische Darstellung interpretiert sie als kalte Supererde mit möglicher Atmosphäre oder globalem Ozean.",
+   "facts": [
+    "LHS 1140b ist eine massereiche Gesteinswelt in der habitablen Zone.",
+    "Modelle diskutieren eine dichte Atmosphäre, Eisflächen oder einen tiefen Ozean.",
+    "Der ruhige Stern macht das System für Atmosphärenbeobachtungen besonders attraktiv."
+   ]
+  },
+  "wasp-12": {
+   "name": "WASP-12",
+   "type": "EXTREMER HOT JUPITER",
+   "count": "1 PLANET",
+   "distance": "~1.400 LICHTJAHRE",
+   "description": "WASP-12b kreist so dicht an seinem Stern, dass er stark verformt und möglicherweise langsam zerrissen wird. Ein leuchtendes Beispiel für extreme Gezeitenkräfte.",
+   "facts": [
+    "WASP-12b benötigt nur wenig mehr als einen Tag für einen Umlauf.",
+    "Extreme Gezeiten verformen den Planeten und könnten Materie vom Planeten abziehen.",
+    "Die Darstellung überhöht seine glühende, gestreckte Nähe zum Stern bewusst."
+   ]
+  },
+  "hd-189733": {
+   "name": "HD 189733",
+   "type": "HOT-JUPITER-SYSTEM",
+   "count": "1 PLANET",
+   "distance": "~64 LICHTJAHRE",
+   "description": "HD 189733b erscheint tiefblau, ist aber keine freundliche Ozeanwelt: In seiner heißen Atmosphäre könnten Silikatwolken und gewaltige Winde dominieren.",
+   "facts": [
+    "Die blaue Farbe wird mit Lichtstreuung in einer heißen Atmosphäre verbunden, nicht mit Ozeanen.",
+    "Silikatpartikel und extreme Winde prägen die experimentelle Wetterdarstellung.",
+    "Der Planet gehört zu den intensiv untersuchten Hot Jupiters."
+   ]
+  },
+  "beta-pictoris": {
+   "name": "BETA PICTORIS",
+   "type": "JUNGES TRÜMMERSCHEIBENSYSTEM",
+   "count": "2 RIESENPLANETEN",
+   "distance": "~63 LICHTJAHRE",
+   "description": "Ein junges System mit heller Trümmerscheibe und zwei direkt untersuchten Riesenplaneten. Es zeigt Planetengeburt und dynamische Scheibenstruktur beinahe in Echtzeit.",
+   "facts": [
+    "Eine ausgedehnte Trümmerscheibe umgibt den jungen Stern.",
+    "Mindestens zwei massive Riesenplaneten formen Lücken und Strukturen in der Scheibe.",
+    "Das System ist ein Labor für frühe planetare Dynamik."
+   ]
+  },
+  "pds-70": {
+   "name": "PDS 70",
+   "type": "PROTOPLANETARE SCHEIBE",
+   "count": "2 PROTOPLANETEN",
+   "distance": "~370 LICHTJAHRE",
+   "description": "PDS 70 beherbergt zwei junge Planeten, die noch in einer protoplanetaren Scheibe wachsen. Die Nahansicht zeigt sie in einer leuchtenden Lücke aus Gas und Staub.",
+   "facts": [
+    "Zwei junge Planeten wurden innerhalb einer protoplanetaren Scheibenlücke untersucht.",
+    "Gas und Staub könnten noch immer auf die wachsenden Planeten strömen.",
+    "Die warme Scheibe ist eine bewusst filmische Interpretation aktiver Planetenbildung."
+   ]
+  },
+  "tau-ceti": {
+   "name": "TAU CETI",
+   "type": "SONNENÄHNLICHER NACHBAR",
+   "count": "4 PLANETENKANDIDATEN",
+   "distance": "~12 LICHTJAHRE",
+   "description": "Ein naher, sonnenähnlicher Stern mit mehreren umstrittenen Planetenkandidaten und einer ausgeprägten Trümmerscheibe. Die dargestellten Welten bleiben bewusst hypothetisch.",
+   "facts": [
+    "Mehrere Planetensignale gelten als Kandidaten und bleiben modellabhängig.",
+    "Eine ausgeprägte Trümmerscheibe deutet auf ein dynamisch aktives System hin.",
+    "Die dargestellten vier Welten sind ausdrücklich hypothetisch visualisiert."
+   ]
+  },
+  "psr-b1257": {
+   "name": "PSR B1257+12",
+   "type": "PULSAR-PLANETENSYSTEM",
+   "count": "3 PLANETEN",
+   "distance": "~2.300 LICHTJAHRE",
+   "description": "Die ersten bestätigten Exoplaneten wurden ausgerechnet um einen Pulsar entdeckt. Drei Welten kreisen um den ultradichten Rest eines explodierten Sterns.",
+   "facts": [
+    "Hier wurden die ersten bestätigten Exoplaneten überhaupt entdeckt.",
+    "Die Welten kreisen um einen schnell rotierenden Neutronenstern.",
+    "Pulsarstrahlen und Planetenbahnen bilden einen radikal anderen Systemtyp."
+   ]
+  }
+ },
+ "cosmic": {
+  "milchstrasse": {
+   "name": "MILCHSTRASSE",
+   "sub": "UNSERE GALAXIE",
+   "type": "BALKENSPIRALGALAXIE · SBc",
+   "scaleText": "~100.000 LJ",
+   "desc": "Unsere Heimatgalaxie. Die Sonne liegt rund 26.000 Lichtjahre vom Zentrum entfernt im Orion-Arm und braucht für einen Umlauf etwa 225 bis 250 Millionen Jahre.",
+   "facts": [
+    "Durchmesser rund 100.000 Lichtjahre",
+    "Schätzungen von 100 bis 400 Milliarden Sternen",
+    "Zentrales Schwarzes Loch Sagittarius A* mit etwa 4,3 Millionen Sonnenmassen",
+    "Vier Hauptarme, dazu Balken und Kernwulst"
+   ]
+  },
+  "lokale-gruppe": {
+   "name": "LOKALE GRUPPE",
+   "sub": "MILCHSTRASSE · ANDROMEDA · M33",
+   "type": "GALAXIENGRUPPE",
+   "scaleText": "~10 MIO. LJ",
+   "desc": "Der gravitativ gebundene Verband, dem die Milchstraße angehört. Zwei große Spiralgalaxien dominieren, der Rest sind überwiegend Zwerggalaxien.",
+   "facts": [
+    "Ausdehnung rund 10 Millionen Lichtjahre",
+    "Über 80 bekannte Mitglieder",
+    "Dominiert von Milchstraße und Andromeda",
+    "Bewegt sich mit etwa 600 km/s relativ zur kosmischen Hintergrundstrahlung"
+   ]
+  },
+  "andromeda-m31": {
+   "name": "ANDROMEDA · M31",
+   "sub": "NACHBARGALAXIE",
+   "type": "SPIRALGALAXIE · Sb",
+   "scaleText": "~2,5 MIO. LJ",
+   "desc": "Die größte Galaxie der Lokalen Gruppe und das fernste Objekt, das sich unter guten Bedingungen noch mit bloßem Auge erkennen lässt.",
+   "facts": [
+    "Entfernung rund 2,5 Millionen Lichtjahre",
+    "Durchmesser etwa 150.000 Lichtjahre",
+    "Nähert sich mit rund 110 km/s",
+    "Verschmelzung mit der Milchstraße in etwa 4,5 Milliarden Jahren"
+   ]
+  },
+  "virgo-haufen": {
+   "name": "VIRGO-HAUFEN",
+   "sub": "LOKALER VIRGO-AUSLÄUFER",
+   "type": "GALAXIENHAUFEN",
+   "scaleText": "~54 MIO. LJ",
+   "desc": "Das nächstgelegene große Massezentrum. Sein Gravitationsfeld bremst die Expansion in unserer Umgebung messbar ab und zieht die Lokale Gruppe nach außen.",
+   "facts": [
+    "Entfernung rund 54 Millionen Lichtjahre",
+    "Etwa 1300 bis 2000 Galaxien",
+    "Zentralgalaxie M87 mit ihrem abgebildeten Schwarzen Loch",
+    "Masse in der Größenordnung von 10 hoch 15 Sonnenmassen"
+   ]
+  },
+  "grosser-attraktor": {
+   "name": "GROSSER ATTRAKTOR",
+   "sub": "LANIAKEA · FLUSSZENTRUM",
+   "type": "MASSEKONZENTRATION",
+   "scaleText": "~150–250 MIO. LJ",
+   "desc": "Auf dieses Gebiet laufen die Eigenbewegungen der Galaxien unserer Umgebung zu. Es liegt teilweise hinter der Scheibe der Milchstraße und ist deshalb optisch schwer zugänglich.",
+   "facts": [
+    "Entfernung rund 150 bis 250 Millionen Lichtjahre",
+    "Richtung der Sternbilder Norma und Centaurus",
+    "Verdeckt durch die Zone of Avoidance",
+    "Massenschätzungen schwanken erheblich"
+   ]
+  },
+  "laniakea": {
+   "name": "LANIAKEA",
+   "sub": "STRÖMUNGSBECKEN · UNSER SUPERHAUFEN",
+   "type": "SUPERHAUFEN · STRÖMUNGSBECKEN",
+   "scaleText": "~520 MIO. LJ",
+   "desc": "2014 von Tully und Kollegen über das Geschwindigkeitsfeld der Galaxien definiert: Laniakea umfasst alle Galaxien, deren Eigenbewegung nach innen zum Großen Attraktor zeigt.",
+   "facts": [
+    "Durchmesser rund 520 Millionen Lichtjahre",
+    "Etwa 100.000 Galaxien",
+    "Abgegrenzt über Strömungslinien, nicht über Helligkeit",
+    "Nicht gravitativ gebunden — die Struktur wird sich auflösen"
+   ]
+  },
+  "shapley-konzentration": {
+   "name": "SHAPLEY-KONZENTRATION",
+   "sub": "MASSEREICHE FERNE ANHÄUFUNG",
+   "type": "SUPERHAUFEN",
+   "scaleText": "~650 MIO. LJ",
+   "desc": "Die massereichste bekannte Konzentration im lokalen Universum. Sie liegt jenseits des Großen Attraktors und trägt vermutlich einen Teil zu dessen Zugwirkung bei.",
+   "facts": [
+    "Entfernung rund 650 Millionen Lichtjahre",
+    "Über 8000 Galaxien in mehreren Haufen",
+    "Dichteste bekannte Konzentration im lokalen Universum",
+    "1930 von Harlow Shapley als Galaxienwolke beschrieben"
+   ]
+  },
+  "pisces-cetus": {
+   "name": "PISCES–CETUS",
+   "sub": "SUPERHAUFEN-KOMPLEX · FILAMENT",
+   "type": "SUPERHAUFEN-KOMPLEX",
+   "scaleText": "~1 MRD. LJ",
+   "desc": "Ein ausgedehnter Filamentkomplex aus mehreren Superhaufen. Laniakea wird gelegentlich als Teil dieser übergeordneten Struktur beschrieben.",
+   "facts": [
+    "Länge rund eine Milliarde Lichtjahre",
+    "Breite etwa 150 Millionen Lichtjahre",
+    "Enthält mehrere eigenständige Superhaufen",
+    "1987 von R. Brent Tully beschrieben"
+   ]
+  },
+  "kosmisches-netz": {
+   "name": "KOSMISCHES NETZ",
+   "sub": "FILAMENTE · KNOTEN · VOIDS",
+   "type": "GROSSSTRUKTUR",
+   "scaleText": "> 1 MRD. LJ",
+   "desc": "Auf den größten Skalen ordnet sich Materie in Filamenten und Knoten an. Dazwischen liegen Voids — riesige, nahezu leere Blasen, die den größten Teil des Volumens einnehmen.",
+   "facts": [
+    "Voids messen typisch 100 bis 300 Millionen Lichtjahre",
+    "Filamente folgen dem Gerüst der dunklen Materie",
+    "Galaxienhaufen sitzen in den Knotenpunkten",
+    "Entstanden aus winzigen Dichteschwankungen im frühen Universum"
+   ]
+  }
+ },
+ "regions": {
+  "inner": [
+   "INNERES SYSTEM",
+   "PLANETARE ZONE",
+   "Planeten, Monde und Asteroidengürtel"
+  ],
+  "kuiper": [
+   "KUIPERGÜRTEL",
+   "DIE EISIGE SCHWELLE",
+   "Kinematisch verdichtete Tiefenraumansicht"
+  ],
+  "oort": [
+   "OORTSCHE WOLKE",
+   "DER ÄUSSERE SAUM",
+   "Hypothetische Kometenwolke · Maßstab komprimiert"
+  ],
+  "milkyway": [
+   "MILCHSTRASSE",
+   "GALAKTISCHE GESAMTANSICHT",
+   "Astronomische Richtungen · Entfernungen logarithmisch entzerrt"
+  ],
+  "laniakea": [
+   "LANIAKEA",
+   "STRÖMUNGSBECKEN",
+   "Lokale Gruppe → Virgo → Großer Attraktor · Maßstab entzerrt"
+  ],
+  "cosmicweb": [
+   "KOSMISCHES NETZ",
+   "FILAMENTE & VOIDS",
+   "Experimentelle ΛCDM-Großstruktur · Maßstab logarithmisch entzerrt"
+  ]
+ },
+ "stages": [
+  [
+   "MILCHSTRASSE",
+   "GALAKTISCHE GESAMTANSICHT",
+   "Astronomische Richtungen · Entfernungen logarithmisch entzerrt"
+  ],
+  [
+   "MILCHSTRASSE",
+   "AM RAND DER SCHEIBE",
+   "Die Scheibe schrumpft zum Mitglied der Lokalen Gruppe"
+  ],
+  [
+   "LOKALE GRUPPE",
+   "MILCHSTRASSE · ANDROMEDA · M33",
+   "Rund fünfzig Zwerggalaxien in einem gemeinsamen Halo"
+  ],
+  [
+   "VIRGO-SUPERHAUFEN",
+   "LOKALER AUSLÄUFER",
+   "Der Virgo-Strang zieht die Lokale Gruppe nach außen"
+  ],
+  [
+   "LANIAKEA",
+   "STRÖMUNGSBECKEN",
+   "Alle Flusslinien laufen auf den Großen Attraktor zu"
+  ],
+  [
+   "SHAPLEY-KONZENTRATION",
+   "JENSEITS DES BECKENS",
+   "Massereichste Anhäufung des lokalen Universums · Maßstab entzerrt"
+  ],
+  [
+   "PISCES–CETUS",
+   "SUPERHAUFEN-KOMPLEX",
+   "Ein Filament von rund einer Milliarde Lichtjahren Länge"
+  ],
+  [
+   "KOSMISCHES NETZ",
+   "FILAMENTE & VOIDS",
+   "Experimentelle ΛCDM-Großstruktur · Maßstab logarithmisch entzerrt"
+  ]
+ ],
+ "ui": {
+  "page.title": "Das Sonnensystem — WebGL-Orbitarium",
+  "ui.language": "Sprache",
+  "hdr.back": "← Jenseits der Messung",
+  "hdr.eyebrow": "ORBITARIUM / 01",
+  "hdr.title": "Unser Sonnensystem",
+  "hdr.controls": "Steuerung",
+  "intro.kicker": "Eine spekulative WebGL-Reise",
+  "intro.h1": "Acht Welten.<br><em>Eine Schwerkraft.</em>",
+  "intro.enter": "System betreten ↓",
+  "ctl.timemachine": "ZEITMASCHINE",
+  "ctl.speed1": "1 Tag / Sek.",
+  "ctl.speed30": "30 Tage / Sek.",
+  "ctl.speed365": "1 Jahr / Sek.",
+  "ctl.today": "Heute",
+  "ctl.scaling": "SKALIERUNG",
+  "ctl.visual": "Anschaulich",
+  "ctl.physical": "Maßstabstreu",
+  "ctl.note.visual": "Distanzen komprimiert, Körper vergrößert. Bahndynamik bleibt erhalten.",
+  "ctl.note.physical": "Distanzen und Körper in derselben AU-Skala. Locator-Punkte markieren unsichtbar kleine Planeten.",
+  "ctl.top": "Draufsicht",
+  "ctl.reset": "Kamera zurücksetzen",
+  "ctl.deepspace": "TIEFENRAUM",
+  "reg.inner": "Inneres System",
+  "reg.kuiper": "Kuipergürtel",
+  "reg.oort": "Oortsche Wolke",
+  "reg.milkyway": "Milchstraße",
+  "reg.laniakea": "Laniakea",
+  "reg.cosmicweb": "Kosmisches Netz",
+  "info.radius": "Radius",
+  "info.distance": "Sonnenabstand",
+  "info.parent": "Mutterplanet",
+  "info.period": "Umlaufzeit",
+  "info.rotation": "Rotation",
+  "info.inclination": "Bahnneigung",
+  "info.light": "Lichtlaufzeit",
+  "info.focus": "Objekt fokussieren",
+  "info.moonsystem": "MONDSYSTEM",
+  "info.moon": "MOND",
+  "info.tidal": "gebunden",
+  "info.retro": " · retrograd",
+  "info.days": "Tage",
+  "info.years": "Jahre",
+  "info.hours": "Stunden",
+  "info.minutes": "Minuten",
+  "info.km": "km",
+  "candle.label": "ASTRONOMISCHE KERZEN",
+  "candle.loading": "GAIA-KATALOG LÄDT …",
+  "candle.visible": "SICHTBAR",
+  "candle.hidden": "AUSGEBLENDET",
+  "candle.note": "KLASSISCHE CEPHEIDEN · PULSATION VISUELL BESCHLEUNIGT",
+  "candle.count": "GAIA-CEPHEIDEN",
+  "candle.error": "KATALOG NICHT GELADEN",
+  "exo.eyebrow": "EXOPLANETEN-ATLAS",
+  "exo.enter": "System betreten →",
+  "exo.exit": "← Zur Milchstraße",
+  "exo.coords": "Astronomische Himmelsrichtung · Entfernung logarithmisch entzerrt",
+  "exo.markerhint": "MAUSRAD · SYSTEM BETRETEN",
+  "exo.regiontag": "FREMDES PLANETENSYSTEM",
+  "exo.nearview": " · kinematische Nahansicht",
+  "cos.eyebrow": "KOSMISCHE GROSSSTRUKTUR",
+  "cos.note": "Räumliche Darstellung kinematisch entzerrt · Zahlenwerte sind astronomische Näherungen",
+  "zoom.scale": "KOSMISCHE SKALA",
+  "zoom.hint": "MAUSRAD · STUFENLOS HINEIN / HINAUS",
+  "zoom.planets": "Planeten",
+  "zoom.kuiper": "Kuiper",
+  "zoom.oort": "Oort",
+  "zoom.galaxy": "Milchstraße",
+  "zoom.laniakea": "Laniakea",
+  "zoom.web": "Kosmisches Netz",
+  "zoom.s.planets": "PLANETEN",
+  "zoom.s.kuiper": "KUIPER",
+  "zoom.s.oort": "OORT",
+  "zoom.s.galaxy": "GALAXIE",
+  "zoom.s.laniakea": "LANIAKEA",
+  "zoom.s.web": "NETZ",
+  "marker.sun": "UNSER SONNENSYSTEM",
+  "legend": "Ziehen: drehen · Mausrad: stufenlos zoomen · Planet oder Struktur anklicken",
+  "acc.title": "J2000 / KINEMATISCHE FIKTION",
+  "acc.text": "Innere Bahnen angenähert. Kuipergürtel und Oortsche Wolke sind bewusst komprimierte, hypothetische Visualisierungen.",
+  "foot.scale": "Im maßstabstreuen Modus markieren Locator-Punkte die sonst kaum sichtbaren Planeten.",
+  "foot.sources": "Quellen:",
+  "foot.licences": "Lizenzen & Quellen",
+  "webgl.missing": "WebGL ist nicht verfügbar."
+ },
+ "lang": "de",
+ "dir": "ltr"
+}
